@@ -1,6 +1,6 @@
 import { configureStore, createSlice } from "@reduxjs/toolkit";
 
-/* eslint-disable no-case-declarations */
+//  eslint-disable no-case-declarations 
 // const ADD_TASK = "task/add";
 // const DELETE_TASK = "task/delete";
 // const FETCH_TASKS = "task/fetch";
@@ -21,6 +21,8 @@ const taskReducer = createSlice({
 });
 
 
+const {addTask, deleteTask} = taskReducer.actions;
+
 
 //! New Style
 export const store = configureStore({
@@ -31,13 +33,9 @@ export const store = configureStore({
 
 
 // Step 3: Log the initial state 
-console.log("initial State: ", store.getState());
+
 
 // Step 4: Dispatch an action to add a task 
-store.dispatch(addTask("Good Morning!"));
-store.dispatch(addTask("Good Afternoon!"));
-store.dispatch(addTask("Good Night"));
-console.log("updated State: ", store.getState());
 
 
 
