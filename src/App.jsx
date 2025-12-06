@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { MdDeleteForever } from "react-icons/md";
 import { useState } from "react";
-import { addTask } from "./store";
+import { addTask, deleteTask } from "./store";
 
 const App = () => {
   const [userTask, setUserTask] = useState("");
@@ -10,7 +10,12 @@ const App = () => {
 
   const handleFromSubmit = (e) => {
     e.preventDefault();
-    dispatch(addTask(userTask))
+    dispatch(addTask(userTask));
+    setUserTask("");
+  };
+
+  const handleDelete = (index) => {
+    dispatch(deleteTask(index));
   };
 
   return (
@@ -42,7 +47,7 @@ const App = () => {
                   <div>
                     <MdDeleteForever
                     className="icon-style"
-                    
+                    onClick={() => handleDelete(index)}
                      />
                   </div>
                 </li>
