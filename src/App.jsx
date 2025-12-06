@@ -1,5 +1,3 @@
-import React from 'react'
-import { Todo } from './components/Todo';
 
 const App = () => {
   return (
@@ -12,9 +10,12 @@ const App = () => {
             <button type="submit">Add Task</button>
           </form>
         </div>
+        <hr />
+
+        <ul id="list-container"></ul>
       </div>
     </div>
-  )
+  );
 };
 
 export default App;
