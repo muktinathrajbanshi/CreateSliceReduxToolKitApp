@@ -2,7 +2,7 @@ import { useSelector } from "react-redux";
 
 const App = () => {
 
-  console.log(useSelector(state => state));
+  const tasks = (useSelector(state => state.taskReducer.task));
   
 
   return (
@@ -17,7 +17,25 @@ const App = () => {
         </div>
         <hr />
 
-        <ul id="list-container"></ul>
+        <ul id="list-container">
+          {
+            tasks.map((curTask, index) => {
+              return (
+                <li key={index}>
+                  <p>
+                    {index}: {curTask}
+                  </p>
+                  <div>
+                    <MdDeleteForever
+                    className="icon-style"
+                    onClick={() => handleTaskDelete(index)}
+                     />
+                  </div>
+                </li>
+              );
+            })
+          }
+        </ul>
       </div>
     </div>
   );
