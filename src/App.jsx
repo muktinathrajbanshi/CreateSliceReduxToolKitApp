@@ -1,5 +1,10 @@
+import { useSelector } from "react-redux";
 
 const App = () => {
+
+  console.log(useSelector(state => state));
+  
+
   return (
     <div className="container">
       <div className="todo-app">
