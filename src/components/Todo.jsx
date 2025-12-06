@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { MdDeleteForever } from "react-icons/md";
 import { useState } from "react";
-import { addTask, deleteTask, fetchTask } from "../store";
+// import { addTask, deleteTask, fetchTask } from "../store";
 
 export const Todo = () => {
 
