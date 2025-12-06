@@ -46,6 +46,9 @@ console.log(store.getState());
 console.log(store.dispatch(addTask("Buy Mango")));
 console.log(store.getState());
 
+console.log(store.dispatch(addTask("Buy Grapes")));
+console.log(store.getState());
+
 console.log(store.dispatch(addTask("Buy Apple")));
 console.log(store.getState());
 

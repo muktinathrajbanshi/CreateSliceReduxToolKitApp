@@ -1,4 +1,5 @@
 import { useSelector } from "react-redux";
+import { MdDeleteForever } from "react-icons/md";
 
 const App = () => {
 
@@ -28,7 +29,7 @@ const App = () => {
                   <div>
                     <MdDeleteForever
                     className="icon-style"
-                    onClick={() => handleTaskDelete(index)}
+                    
                      />
                   </div>
                 </li>
