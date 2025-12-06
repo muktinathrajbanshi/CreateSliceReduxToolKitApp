@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { MdDeleteForever } from "react-icons/md";
 import { useState } from "react";
-import { addTask, deleteTask } from "./store";
+import { addTask, deleteTask } from "./features/tasks/taskSlice.jsx";
 
 const App = () => {
   const [userTask, setUserTask] = useState("");
