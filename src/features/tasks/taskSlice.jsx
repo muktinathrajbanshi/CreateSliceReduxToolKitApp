@@ -6,7 +6,7 @@ const initialState = {
 };
 
 //? RTK slice
-export const taskReducer = createSlice({
+const taskReducer = createSlice({
     name: "task",
     initialState,
     reducers:{
@@ -23,3 +23,4 @@ export const taskReducer = createSlice({
 
 
 export const {addTask, deleteTask} = taskReducer.actions;
+export default taskReducer.reducer;
